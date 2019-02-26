@@ -8,6 +8,7 @@ export default class Home extends Component {
     state = {
         recipes: [],
     }
+
     getRecipes = (query) => {
         axios.get(`${baseUrl}${query}`)
             .then(res => {
