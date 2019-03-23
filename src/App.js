@@ -6,6 +6,7 @@ import Login from './components/Login';
 import MyRecipes from './components/MyRecipes';
 import RecipeDetails from './components/RecipeDetails';
 import Register from './components/Register';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path='/register' component={Register} />
           <Route path='/myrecipes' component={MyRecipes} />
           <Route path='/details/:id' component={RecipeDetails} />
+          <Footer />
         </div>
       </BrowserRouter>
     );

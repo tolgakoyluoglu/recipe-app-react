@@ -42,12 +42,14 @@ export default class Home extends Component {
         })
 
         return (
-            <div className="container">
+            <div className="wrap">
                 <form className="searchForm" onSubmit={this.handleSubmit}>
-                    <input type="text" name="search" ref={input => (this.query = input)} placeholder="Search for a recipe ..."></input>
-                    <button className="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                    <input type="text" name="search" ref={input => (this.query = input)} autocomplete="off" placeholder="Search for a recipe ..."></input>
+                    <button className="btn" type="submit" name="action">Submit</button>
                 </form>
-                {recipeList}
+                <div className="recipeContainer">
+                    {recipeList}
+                </div>
             </div>
         )
     }
